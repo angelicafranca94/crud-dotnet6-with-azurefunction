@@ -12,7 +12,11 @@ public class Person: ITableEntity
 
     [JsonPropertyName("email")]
     public string Email { get; set; }
+
+    [JsonPropertyName("partitionkey")]
     public string PartitionKey { get; set; }
+
+    [JsonPropertyName("rowkey")]
     public string RowKey { get; set; }
     public DateTimeOffset? Timestamp { get; set; }
     ETag ITableEntity.ETag { get; set; }
