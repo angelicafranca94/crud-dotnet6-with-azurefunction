@@ -22,11 +22,11 @@ namespace AzureFunctions
         {
             log.LogInformation("ListPeople function started a request.");
 
-            var page1 =  tableClient.QueryAsync<Person>();
+            var table =  tableClient.QueryAsync<Person>();
 
             log.LogInformation("ListPeople function finished a request.");
 
-            return new OkObjectResult(page1);
+            return new OkObjectResult(table);
         }
     }
 }
